@@ -24,7 +24,23 @@
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+  <script>
+  // just for the demos, avoids form submit
+  jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
+  });
+  $( "#contact" ).validate({
+    rules: {
+      _replyto: { 
+        required: true 
+      },
+      name: {
+        required: true
+      }
+    }
+  });
+  </script>
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="../../dist/images/favicon.png">
